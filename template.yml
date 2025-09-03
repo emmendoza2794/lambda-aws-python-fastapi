@@ -1,0 +1,32 @@
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Timeout: 300
+    MemorySize: 256
+    Runtime: python3.12
+    Environment:
+      Variables:
+        TZ: "America/Bogota"
+
+Resources:
+  TestApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: 'api-test-function'
+      Handler: main.handler
+      Runtime: python3.12
+      Timeout: 300
+      MemorySize: 256
+
+      Events:
+        Api:
+          Type: HttpApi
+
+Outputs:
+  TestApi:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+  TestApiFunction:
+    Description: "Lambda Function ARN"
+    Value: !GetAtt TestApiFunction.Arn

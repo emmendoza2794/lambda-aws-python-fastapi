@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "Api-test"
+s3_bucket = "otras-lambdas"
+s3_prefix = "api-test"
+region = "us-west-2"
+confirm_changeset = false
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
