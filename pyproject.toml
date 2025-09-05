@@ -5,11 +5,17 @@ description = ""
 authors = [
     {name = "Edinson Mendoza",email = "emmendoza2794@gmail.com"}
 ]
-readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi[standard] (>=0.116.1,<0.117.0)",
-    "mangum (>=0.19.0,<0.20.0)"
+    "mangum (>=0.19.0,<0.20.0)",
+    "sqlalchemy (>=2.0.43,<3.0.0)",
+    "passlib (>=1.7.4,<2.0.0)",
+    "pydantic-settings (>=2.0.0,<3.0.0)",
+    "psycopg2-binary (>=2.9.0,<3.0.0)",
+    "pyjwt (>=2.8.0,<3.0.0)",
+    "python-multipart (>=0.0.9,<1.0.0)",
+    "python-dotenv (>=1.0.0,<2.0.0)"
 ]
 
 
